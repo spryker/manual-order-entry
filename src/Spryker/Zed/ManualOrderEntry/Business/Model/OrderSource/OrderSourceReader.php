@@ -17,9 +17,6 @@ class OrderSourceReader implements OrderSourceReaderInterface
      */
     protected $manualOrderEntryRepository;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntry\Persistence\ManualOrderEntryRepositoryInterface $manualOrderEntryRepository
-     */
     public function __construct(
         ManualOrderEntryRepositoryInterface $manualOrderEntryRepository
     ) {

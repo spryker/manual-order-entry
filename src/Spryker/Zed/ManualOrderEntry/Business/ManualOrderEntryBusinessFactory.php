@@ -19,9 +19,6 @@ use Spryker\Zed\ManualOrderEntry\Business\Model\OrderSource\OrderSourceReaderInt
  */
 class ManualOrderEntryBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ManualOrderEntry\Business\Model\OrderSource\OrderSourceReaderInterface
-     */
     public function createOrderSourceReader(): OrderSourceReaderInterface
     {
         return new OrderSourceReader(
@@ -29,9 +26,6 @@ class ManualOrderEntryBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ManualOrderEntry\Business\Model\OrderSource\OrderSourceHydratorInterface
-     */
     public function createOrderSourceHydrator(): OrderSourceHydratorInterface
     {
         return new OrderSourceHydrator();

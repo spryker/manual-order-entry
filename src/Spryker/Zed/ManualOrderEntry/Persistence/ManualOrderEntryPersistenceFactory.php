@@ -26,9 +26,6 @@ class ManualOrderEntryPersistenceFactory extends AbstractPersistenceFactory
         return SpyOrderSourceQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ManualOrderEntry\Persistence\Propel\Mapper\OrderSourceMapperInterface
-     */
     public function createOrderSourceMapper(): OrderSourceMapperInterface
     {
         return new OrderSourceMapper();

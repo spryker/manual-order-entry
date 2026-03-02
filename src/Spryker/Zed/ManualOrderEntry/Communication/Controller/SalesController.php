@@ -67,11 +67,6 @@ class SalesController extends AbstractController
         return $orderTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OrderSourceTransfer $orderSourceTransfer
-     *
-     * @return string
-     */
     protected function getOrderSourceName(OrderSourceTransfer $orderSourceTransfer): string
     {
         return $orderSourceTransfer->getName() ?? '-';

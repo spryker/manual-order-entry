@@ -12,10 +12,5 @@ use Orm\Zed\ManualOrderEntry\Persistence\SpyOrderSource;
 
 interface OrderSourceMapperInterface
 {
-    /**
-     * @param \Orm\Zed\ManualOrderEntry\Persistence\SpyOrderSource $orderSourceEntity
-     *
-     * @return \Generated\Shared\Transfer\OrderSourceTransfer
-     */
     public function mapOrderSourceEntityToTransfer(SpyOrderSource $orderSourceEntity): OrderSourceTransfer;
 }

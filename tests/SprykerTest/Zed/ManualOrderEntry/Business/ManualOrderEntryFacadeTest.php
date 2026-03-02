@@ -30,9 +30,6 @@ class ManualOrderEntryFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testGetOrderSourceByIdShouldReturnTransferObjectForExistingOrderSource(): void
     {
         $idOrderSource = 1;
@@ -42,9 +39,6 @@ class ManualOrderEntryFacadeTest extends Unit
         $this->assertSame($idOrderSource, $orderSourceTransfer->getIdOrderSource());
     }
 
-    /**
-     * @return void
-     */
     public function testFindAllOrderSourcesShouldReturnArrayOfTransferObjectsOrderSource(): void
     {
         $orderSourceTransfers = $this->getFacade()->getAllOrderSources();
@@ -55,9 +49,6 @@ class ManualOrderEntryFacadeTest extends Unit
         $this->assertTrue($orderSourceTransfer instanceof OrderSourceTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testHydrateOrderSourceShouldReturnTransferObjectOrderSource(): void
     {
         $salesOrderEntityTransfer = $this->tester->createEmptySpySalesOrderEntityTransfer();
@@ -70,9 +61,6 @@ class ManualOrderEntryFacadeTest extends Unit
         $this->assertSame($quoteTransfer->getOrderSource()->getIdOrderSource(), $hydratedSalesOrderEntityTransfer->getFkOrderSource());
     }
 
-    /**
-     * @return \Spryker\Zed\ManualOrderEntry\Business\ManualOrderEntryFacadeInterface
-     */
     protected function getFacade(): ManualOrderEntryFacadeInterface
     {
         /**

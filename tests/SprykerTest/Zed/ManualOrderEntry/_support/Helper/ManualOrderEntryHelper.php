@@ -17,17 +17,11 @@ class ManualOrderEntryHelper extends Module
 {
     use LocatorHelperTrait;
 
-    /**
-     * @return \Generated\Shared\Transfer\SpySalesOrderEntityTransfer
-     */
     public function createEmptySpySalesOrderEntityTransfer(): SpySalesOrderEntityTransfer
     {
         return new SpySalesOrderEntityTransfer();
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function createQuoteTransferWithOrderSource(): QuoteTransfer
     {
         $quoteTransfer = new QuoteTransfer();
