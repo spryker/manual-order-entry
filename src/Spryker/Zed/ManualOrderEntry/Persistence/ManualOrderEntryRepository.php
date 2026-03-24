@@ -38,6 +38,22 @@ class ManualOrderEntryRepository extends AbstractRepository implements ManualOrd
             ->mapOrderSourceEntityToTransfer($orderSourceEntity);
     }
 
+    public function getOrderSourceName(?int $idOrderSource): string
+    {
+        if ($idOrderSource === null) {
+            return '-';
+        }
+        $query = $this->getFactory()->createOrderSourceQuery();
+        $orderSourceEntity = $query->filterByIdOrderSource($idOrderSource)
+            ->findOne();
+
+        if (!$orderSourceEntity) {
+            return '-';
+        }
+
+        return $orderSourceEntity->getName();
+    }
+
     /**
      * @return array<\Generated\Shared\Transfer\OrderSourceTransfer>
      */

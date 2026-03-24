@@ -21,6 +21,8 @@ use Symfony\Component\HttpFoundation\Request;
 class SalesController extends AbstractController
 {
     /**
+     * @deprecated Exists for BC reasons. Use {@link \Spryker\Zed\ManualOrderEntry\Communication\Plugin\Sales\ManualOrderEntrySalesListBlockRendererPlugin} instead.
+     *
      * @param \Symfony\Component\HttpFoundation\Request $request
      *
      * @return array

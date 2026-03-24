@@ -20,6 +20,8 @@ interface ManualOrderEntryRepositoryInterface
      */
     public function getOrderSourceById($idOrderSource): OrderSourceTransfer;
 
+    public function getOrderSourceName(?int $idOrderSource): string;
+
     /**
      * @return array<\Generated\Shared\Transfer\OrderSourceTransfer>
      */
